@@ -51,7 +51,7 @@
         <div class="col-xs-12 text-center"><h8>LAT: <?php echo e($siteinfos->lattitude); ?></h8></div>
         <div class="col-xs-12 text-center"><h8>LONG: <?php echo e($siteinfos->longtitude); ?></h8></div>
         <?php if( $siteinfos->sensor == 1 ): ?>
-        <div class="col-sm-3 text-left"><h2>RN</h2></div>
+        <div class="col-sm-3 text-left"><h2>RF</h2></div>
         <div class="col-sm-3 "><h2>    </h2></div>
         <div class="col-sm-3 "><h2>    </h2></div>
         <?php endif; ?>
@@ -59,13 +59,13 @@
         <?php if( $siteinfos->sensor == 2 ): ?>
         <div class="col-sm-3 "><h2>LVL</h2></div>
         <div class="col-sm-3 "><h2>     </h2></div>
-        <div class="col-sm-3 "><h2>DSC</h2></div>
+        <div class="col-sm-3 "><h2>Q</h2></div>
         <?php endif; ?>
 
          <?php if( $siteinfos->sensor == 3 ): ?>
-        <div class="col-sm-3 text-left"><h2>RN</h2></div>
+        <div class="col-sm-3 text-left"><h2>RF</h2></div>
         <div class="col-sm-3 "><h2>LVL</h2></div>
-        <div class="col-sm-3 "><h2>DSC</h2></div>
+        <div class="col-sm-3 "><h2>Q</h2></div>
         <?php endif; ?>
 
         <div class="col-sm-3 text-right"><h2>BATT</h2></div>
@@ -139,7 +139,7 @@
         <?php endif; ?>
         
         <?php if($siteinfos->voltage < 12): ?>
-          <div class="col-sm-3 text-right"><h3><?php echo e($siteinfos->voltage); ?> <h6>Volts </h6></h3><div class="glyphicon-ring glyphicon-gray"><br><br><span class="glyphicon glyphicon-warning-sign CarVoltNot"></span></div></div>
+          <div class="col-sm-3 text-right"><h3><?php echo e($siteinfos->voltage); ?> <h6>Volts </h6></h3><div class="glyphicon-ring glyphicon-gray"><br><br><span class="glyphicon glyphicon-waRFing-sign CarVoltNot"></span></div></div>
         <?php endif; ?>
         <div class="col-xs-12"><h4>DATA AS OF: <?php echo e($siteinfos->asof); ?></h4></div>
      </div>

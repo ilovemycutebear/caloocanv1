@@ -16,7 +16,7 @@
       <ul class="nav nav-tabs" id="myTab">
         <li><a data-target="#table" data-toggle="tab">Table</a></li>
         <li><a data-target="#wlchart" data-toggle="tab">Level Chart</a></li>
-        <li><a data-target="#dschart" data-toggle="tab">Discharge Chart</a></li>
+        <!--li><a data-target="#dschart" data-toggle="tab">Discharge Chart</a></li-->
       </ul>
 
       <div class="tab-content">
@@ -47,13 +47,13 @@
         </div>
 
 
-        <div class="tab-pane" id="dschart">
+        <!--div class="tab-pane" id="dschart">
          <div id="control_label" class="alert-info text-center"><h1>DISCHARGE GRAPH</h1></div>
-        <!--*********WLCHARTS**************-->
+        
         
        <div id="dscontrol_div" style="width: 1000px; height: 700px; "></div>
 
-        </div>
+        </div-->
 
 
       </div>

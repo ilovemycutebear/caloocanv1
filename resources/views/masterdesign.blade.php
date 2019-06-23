@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="refresh" content="600">
-        <title>MARIIS FFWS</title>
+        <title>SAN MATEO</title>
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="//cdn.datatables.net/1.10.8/css/jquery.dataTables.min.css">
   <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
@@ -132,12 +132,12 @@
     -1px 1px 0 #000000,
     3px 3px 0 #000000,
 }
-h1 { 
-    color: #0f4759;
+/*h1 { 
+    color: #99e6ff;
     font-size :40px;
 }
 h3 { 
-    color: #ffe09e;
+    color: #e8f6ff;
     font-size :100px;
         text-shadow:
     -1px -1px 0 #f95cf2,
@@ -146,7 +146,7 @@ h3 {
     3px 3px 0 #f95cf2;
 }
 h6{
-  color: #e87000;
+  color: #fdffb7;
   font-size:50px;
     text-shadow:
     -1px -1px 0 #000000,
@@ -214,6 +214,15 @@ h2 {
     1px -1px 0 #000000,
     -1px 1px 0 #000000,
     3px 3px 0 #000000;
+}*/
+h1 { 
+    color: #99e6ff;
+}
+h2 { 
+    color: #e8f6ff;
+}
+h3 { 
+    color: #fdffb7;
 }
 .glyphicon-gray {
   background: black;
@@ -277,57 +286,72 @@ h2 {
  $colHover       : #ffe6d1; /*/
 /* --- Style --- */
 .navbar-default {
-  background-color: #052e5c;
-  border-color: #c4fb79;
+  background-color: #01d5f8;
+  border-color: #1766b4;
 }
 .navbar-default .navbar-brand {
-  color: #02b25f;
+  color: #0056ab;
 }
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #91d451;
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #b6e9f8;
+}
+.navbar-default .navbar-text {
+  color: #0056ab;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #02b25f;
+  color: #0056ab;
 }
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #91d451;
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #b6e9f8;
 }
-.navbar-default .navbar-nav .active > a, .navbar-default .navbar-nav .active > a:hover, .navbar-default .navbar-nav .active > a:focus {
-  color: #91d451;
-  background-color: #c4fb79;
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #b6e9f8;
+  background-color: #1766b4;
 }
-.navbar-default .navbar-nav .open > a, .navbar-default .navbar-nav .open > a:hover, .navbar-default .navbar-nav .open > a:focus {
-  color: #91d451;
-  background-color: #c4fb79;
-}
-.navbar-default .navbar-nav .open > a .caret, .navbar-default .navbar-nav .open > a:hover .caret, .navbar-default .navbar-nav .open > a:focus .caret {
-  border-top-color: #91d451;
-  border-bottom-color: #91d451;
-}
-.navbar-default .navbar-nav > .dropdown > a .caret {
-  border-top-color: #02b25f;
-  border-bottom-color: #02b25f;
-}
-.navbar-default .navbar-nav > .dropdown > a:hover .caret, .navbar-default .navbar-nav > .dropdown > a:focus .caret {
-  border-top-color: #91d451;
-  border-bottom-color: #91d451;
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #b6e9f8;
+  background-color: #1766b4;
 }
 .navbar-default .navbar-toggle {
-  border-color: #c4fb79;
+  border-color: #1766b4;
 }
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: #c4fb79;
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #1766b4;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #02b25f;
+  background-color: #0056ab;
 }
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #0056ab;
+}
+.navbar-default .navbar-link {
+  color: #0056ab;
+}
+.navbar-default .navbar-link:hover {
+  color: #b6e9f8;
+}
+
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #02b25f;
+    color: #0056ab;
   }
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #91d451;
-    background-color: #c4fb79;
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #b6e9f8;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #b6e9f8;
+    background-color: #1766b4;
   }
 }
 /* Do not take in account */
@@ -378,7 +402,7 @@ table.dataTable thead tr {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand">MARIIS FFWS</a>
+          <a class="navbar-brand">SAN MATEO</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -400,9 +424,9 @@ table.dataTable thead tr {
             <li class="{{ Request::is('hstrywlevel') ? 'active' : '' }}">
                 <a href="{{ url('hstrywlevel') }}">LEVEL HISTORICAL</a>
             </li>
-            <li class="{{ Request::is('hstrycombo') ? 'active' : '' }}">
+            <!--li class="{{ Request::is('hstrycombo') ? 'active' : '' }}">
                 <a href="{{ url('hstrycombo') }}">COMBO HISTORICAL</a>
-            </li>
+            </li-->
         </ul>
         <ul class="nav navbar-nav navbar-right">
              <li class="{{ Request::is('about') ? 'active' : '' }}">

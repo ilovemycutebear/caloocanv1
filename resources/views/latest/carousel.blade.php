@@ -56,7 +56,7 @@
         <div class="col-xs-12 text-center"><h8>LAT: {{ $siteinfos->lattitude }}</h8></div>
         <div class="col-xs-12 text-center"><h8>LONG: {{ $siteinfos->longtitude }}</h8></div>
         @if( $siteinfos->sensor == 1 )
-        <div class="col-sm-3 text-left"><h2>RN</h2></div>
+        <div class="col-sm-3 text-left"><h2>RF</h2></div>
         <div class="col-sm-3 "><h2>    </h2></div>
         <div class="col-sm-3 "><h2>    </h2></div>
         @endif
@@ -64,13 +64,13 @@
         @if( $siteinfos->sensor == 2 )
         <div class="col-sm-3 "><h2>LVL</h2></div>
         <div class="col-sm-3 "><h2>     </h2></div>
-        <div class="col-sm-3 "><h2>DSC</h2></div>
+        <div class="col-sm-3 "><h2>Q</h2></div>
         @endif
 
          @if( $siteinfos->sensor == 3 )
-        <div class="col-sm-3 text-left"><h2>RN</h2></div>
+        <div class="col-sm-3 text-left"><h2>RF</h2></div>
         <div class="col-sm-3 "><h2>LVL</h2></div>
-        <div class="col-sm-3 "><h2>DSC</h2></div>
+        <div class="col-sm-3 "><h2>Q</h2></div>
         @endif
 
         <div class="col-sm-3 text-right"><h2>BATT</h2></div>
@@ -144,7 +144,7 @@
         @endif
         
         @if($siteinfos->voltage < 12)
-          <div class="col-sm-3 text-right"><h3>{{ $siteinfos->voltage }} <h6>Volts </h6></h3><div class="glyphicon-ring glyphicon-gray"><br><br><span class="glyphicon glyphicon-warning-sign CarVoltNot"></span></div></div>
+          <div class="col-sm-3 text-right"><h3>{{ $siteinfos->voltage }} <h6>Volts </h6></h3><div class="glyphicon-ring glyphicon-gray"><br><br><span class="glyphicon glyphicon-waRFing-sign CarVoltNot"></span></div></div>
         @endif
         <div class="col-xs-12"><h4>DATA AS OF: {{$siteinfos->asof}}</h4></div>
      </div>
