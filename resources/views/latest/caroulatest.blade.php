@@ -15,7 +15,7 @@
         <div class="col-md-4 text-center"><h1>{{ $siteinfos->Site }}</h1></div>
       @endforeach
 
-      <div class="col-xs-6 col-md-4 text-center"><h2>RAIN</h2></div>
+      <div class="col-xs-6 col-md-4 text-center"><h2>LEVEL</h2></div>
           <div class="col-xs-6 col-md-4 text-center"><h2>LEVEL</h2></div>
            <div class="col-xs-6 col-md-4 text-center"><h2>RAIN</h2></div>
     

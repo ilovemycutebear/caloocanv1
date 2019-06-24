@@ -18,7 +18,7 @@
           <div class="col-xs-6 col-md-4 text-center"><h2>LEVEL</h2></div>
            <div class="col-xs-6 col-md-4 text-center"><h2>RAIN</h2></div>
     
-        <div class="col-xs-6 col-md-4 text-center"><h2>   <?php echo e($latestcrsl[0]->rainten); ?> mm</h2></div>
+        <div class="col-xs-6 col-md-4 text-center"><h2>   <?php echo e($latestcrsl[0]->water); ?> M</h2></div>
 
         <div class="col-xs-6 col-md-4 text-center"><h2>   <?php echo e($latestcrsl[1]->water); ?> M</h2></div>
 
