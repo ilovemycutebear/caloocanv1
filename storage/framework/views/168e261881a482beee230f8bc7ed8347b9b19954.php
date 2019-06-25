@@ -26,9 +26,7 @@
                 <th>NAME</th>
                 <th>DATE/TIME</th>
                 <th>BATTERY</th>
-                <th>RAW LEVEL</th>
                 <th>WATER LEVEL</th>
-                <th>DISCHARGE</th>
             </tr>
         </thead>
        </table>
@@ -172,8 +170,7 @@ function RNcalltable(){
             { data: 'asof', name: 'asof' },
             { data: 'voltage', name: 'voltage' , orderable: false},
             { data: 'rawlvl', name: 'rawlvl' },
-            { data: 'water', name: 'water' },
-            { data: 'discharge', name: 'discharge' },
+           
         ], 
         dom: 'Bfrtip',
         buttons: [

@@ -14,7 +14,7 @@
         <div class="col-md-4 text-center"><h1><?php echo e($siteinfos->Site); ?></h1></div>
       <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
 
-      <div class="col-xs-6 col-md-4 text-center"><h2>RAIN</h2></div>
+      <div class="col-xs-6 col-md-4 text-center"><h2>LEVEL</h2></div>
           <div class="col-xs-6 col-md-4 text-center"><h2>LEVEL</h2></div>
            <div class="col-xs-6 col-md-4 text-center"><h2>RAIN</h2></div>
     
