@@ -145,7 +145,7 @@ $('#datepicker').on('apply.daterangepicker', function(ev, picker) {
             
             RNcalltable();
             drawWlChart();
-            drawDsChart();
+            //drawDsChart();
             $('#myModal').modal('show');
 
 });
