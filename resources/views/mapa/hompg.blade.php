@@ -9,7 +9,7 @@
     var mymap;
 
             function onLoad() {
-                 mymap = L.map('mapid').setView([16.904276, 121.798675], 9);
+                 mymap = L.map('mapid').setView([14.678879, 121.155388], 12);
 
                 //var geojsonLayer = new L.GeoJSON.AJAX('{{URL::asset('wlmap')}}');       
 
