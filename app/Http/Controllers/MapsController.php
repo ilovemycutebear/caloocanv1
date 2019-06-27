@@ -184,7 +184,7 @@ class MapsController extends Controller
 
         //$siteinfo = site::all();
 
-        $query= DB::select("SELECT site.name as Site,site.sitelat as lattitude ,site.sitelong as longtitude,site.wlalert as wlalert,site.wlalarm as wlalarm,site.wlcritical as wlcritical,logs.wlevel+site.sitelev as water,logs.created_at as asof, logs.site_id as siteid FROM site INNER JOIN logs on site.id=logs.site_id WHERE logs.cnt IN (SELECT MAX(cnt) FROM logs GROUP BY site_id) AND (site.sensortype = 2 OR site.sensortype = 3)");
+        $query= DB::select("SELECT site.name as Site,site.sitelat as lattitude ,site.sitelong as longtitude,site.wlalert as wlalert,site.wlalarm as wlalarm,site.wlcritical as wlcritical,logs.wlevel as water,logs.created_at as asof, logs.site_id as siteid FROM site INNER JOIN logs on site.id=logs.site_id WHERE logs.cnt IN (SELECT MAX(cnt) FROM logs GROUP BY site_id) AND (site.sensortype = 2 OR site.sensortype = 3)");
 
         /*$results = DB::table('site')
             ->join('logs', 'site.id', '=', 'logs.site_id')
