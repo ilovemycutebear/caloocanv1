@@ -32,8 +32,8 @@
     <style type="text/css">
         body{
     height: 100%;
-    padding-top: 30px;
-    background-image: url("{{URL::asset('img/background.jpg')}}");
+    padding-top: 80px;
+    background-image: url("{{URL::asset('img/bck.jpg')}}");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -215,6 +215,46 @@ h2 {
     -1px 1px 0 #000000,
     3px 3px 0 #000000;
 }*/
+.bg-texta {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  z-index: 2;
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+}
+.bg-textb {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  z-index: 2;
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+}
+.bg-textc {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  z-index: 2;
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+}
+.bg-textd {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  z-index: 2;
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+}
 h1 { 
     color: #99e6ff;
 }
