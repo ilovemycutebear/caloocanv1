@@ -67,7 +67,7 @@ class CarouselController extends Controller
 			
 									}*/
 
-		$latestcrsl = DB::select("SELECT site.name as Site,site.sitelat as lattitude ,site.sitelong as longtitude,FORMAT(logs.rvalue, 2)as rainten,FORMAT(logs.wlevel,2) as water,FORMAT(logs.batteryvolt,2) as voltage,logs.created_at as asof, logs.site_id as siteid FROM site INNER JOIN logs on site.id=logs.site_id WHERE logs.cnt IN (SELECT MAX(cnt) FROM logs GROUP BY site_id) AND (site.sensortype = 1 OR site.sensortype = 2)ORDER BY CAST(site.id AS UNSIGNED ) ASC");		
+		$latestcrsl = DB::select("SELECT site.name as Site,site.sitelat as lattitude ,site.sitelong as longtitude,FORMAT(logs.rvalue, 2)as rainten,FORMAT(logs.wlevel,2) as water,FORMAT(logs.batteryvolt,2) as voltage,DATE_FORMAT(logs.created_at, '%M %d %Y %r') as asof,site.sensortype as sensor,site.wlalert as alert,site.wlalarm as alarm,site.wlcritical as critical, logs.site_id as siteid FROM site INNER JOIN logs on site.id=logs.site_id WHERE logs.cnt IN (SELECT MAX(cnt) FROM logs GROUP BY site_id) AND (site.sensortype = 1 OR site.sensortype = 2)ORDER BY CAST(site.id AS UNSIGNED ) ASC");		
 		
 
 		return view('latest.caroulatest',compact('latestcrsl'));

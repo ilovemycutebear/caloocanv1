@@ -32,7 +32,7 @@
     <style type="text/css">
         body{
     height: 100%;
-    padding-top: 80px;
+    padding-top: 50px;
     background-image: url("<?php echo e(URL::asset('img/bck.jpg')); ?>");
     background-repeat: no-repeat;
     background-size: cover;
@@ -44,7 +44,7 @@
 }
 .RainGray{
     color: #727882;
-    font-size:90px;
+    font-size:40px;
     text-shadow:
     -1px -1px 0 #000000,
     1px -1px 0 #000000,
@@ -53,7 +53,7 @@
 }
 .RainGreen{
     color: #08cca1;
-    font-size:90px;
+    font-size:40px;
     text-shadow:
     -1px -1px 0 #000000,
     1px -1px 0 #000000,
@@ -62,7 +62,7 @@
 }
 .RainBlueGreen{
     color: #07b5cc;
-    font-size:90px;
+    font-size:40px;
     text-shadow:
     -1px -1px 0 #000000,
     1px -1px 0 #000000,
@@ -71,7 +71,7 @@
 }
 .RainBlue{
     color: #1938ff;
-    font-size:90px;
+    font-size:40px;
     text-shadow:
     -1px -1px 0 #000000,
     1px -1px 0 #000000,
@@ -80,7 +80,7 @@
 }
 .RainViolet{
     color: #8702e0;
-    font-size:90px;
+    font-size:40px;
     text-shadow:
     -1px -1px 0 #000000,
     1px -1px 0 #000000,
@@ -89,7 +89,7 @@
 }
 .RainYellow{
     color: #f4d800;
-    font-size:90px;
+    font-size:40px;
     text-shadow:
     -1px -1px 0 #000000,
     1px -1px 0 #000000,
@@ -98,7 +98,7 @@
 }
 .RainOrange{
     color: #e08701;
-    font-size:90px;
+    font-size:40px;
     text-shadow:
     -1px -1px 0 #000000,
     1px -1px 0 #000000,
@@ -107,7 +107,7 @@
 }
 .RainRed{
     color: #c90000;
-    font-size:90px;
+    font-size:40px;
     text-shadow:
     -1px -1px 0 #000000,
     1px -1px 0 #000000,
@@ -116,7 +116,7 @@
 }  
 .CarVoltNot{
     color: #af0f07;
-    font-size:90px;
+    font-size:40px;
     text-shadow:
     -1px -1px 0 #000000,
     1px -1px 0 #000000,
@@ -125,7 +125,7 @@
 }  
 .CarVoltOK{
   color: #07ffa0;
-  font-size:90px;
+  font-size:40px;
     text-shadow:
     -1px -1px 0 #000000,
     1px -1px 0 #000000,
@@ -217,7 +217,7 @@ h2 {
 }*/
 .bg-texta {
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  background-color: rgba(0,0,0, 0.5); /* Black w/opacity/see-through */
   font-weight: bold;
   border: 3px solid #f1f1f1;
   z-index: 2;
@@ -227,7 +227,7 @@ h2 {
 }
 .bg-textb {
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  background-color: rgba(0,0,0, 0.5); /* Black w/opacity/see-through */
   font-weight: bold;
   border: 3px solid #f1f1f1;
   z-index: 2;
@@ -237,7 +237,7 @@ h2 {
 }
 .bg-textc {
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  background-color: rgba(0,0,0, 0.5); /* Black w/opacity/see-through */
   font-weight: bold;
   border: 3px solid #f1f1f1;
   z-index: 2;
@@ -247,7 +247,17 @@ h2 {
 }
 .bg-textd {
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  background-color: rgba(0,0,0, 0.5); /* Black w/opacity/see-through */
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  z-index: 2;
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+}
+.bg-texte {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.5); /* Black w/opacity/see-through */
   font-weight: bold;
   border: 3px solid #f1f1f1;
   z-index: 2;
@@ -260,9 +270,14 @@ h1 {
 }
 h2 { 
     color: #e8f6ff;
+    font-size: 25px;
 }
 h3 { 
     color: #fdffb7;
+}
+h4{
+   color: #b5c5c9;
+    font-size: 20px;
 }
 .glyphicon-gray {
   background: black;
@@ -307,7 +322,7 @@ h3 {
   height: 300px;
 }
 
-/*navbar customiziation*/
+/*navbar iziation*/
 /* Red */
 /* Green * /
  $bgDefault      : #2ecc71;
