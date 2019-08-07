@@ -23,19 +23,19 @@
        @endif
       @endforeach
 
-          <div class="col-xs-6 col-md-4 center-block" style=" margin-left: -200px;"><h2 class="bg-textb">WATER LEVEL</h2></div>
-          <div class="col-xs-6 col-md-4 center-block" style="padding-left: 300px;"><h2 class="bg-textb">WATER LEVEL</h2></div>
-           <div class="col-xs-6 col-md-4 center-block" style="padding-left: 500px;"><h2 class="bg-textb">RAIN</h2></div>
+          <div class="col-xs-6 col-md-4 center-block" style=" margin-left: -200px;"><h2 class="bg-textb">RAIN</h2></div>
+          <div class="col-xs-6 col-md-4 center-block" style="padding-left: 300px;"><h2 class="bg-textb">RAIN</h2></div>
+           <div class="col-xs-6 col-md-4 center-block" style="padding-left: 500px;"><h2 class="bg-textb">WATER LEVEL</h2></div>
 
     
-        <div class="col-xs-6 col-md-4 center-block" style=" margin-left: -200px;"><h2 class="bg-textc">{{ $latestcrsl[0]->water}} M </h2></div>
-        <div class="col-xs-6 col-md-4 center-block" style=" padding-left: 300px;"><h2 class="bg-textc">   {{ $latestcrsl[1]->water}} M</h2></div>
-        <div class="col-xs-6 col-md-4 center-block" style=" padding-left: 500px;"><h2 class="bg-textc">   {{ $latestcrsl[2]->rainten }} mm</h2></div>
+        <div class="col-xs-6 col-md-4 center-block" style=" margin-left: -200px;"><h2 class="bg-textc">{{ $latestcrsl[0]->rainten}} mm </h2></div>
+        <div class="col-xs-6 col-md-4 center-block" style=" padding-left: 300px;"><h2 class="bg-textc">   {{ $latestcrsl[1]->rainten}} mm</h2></div>
+        <div class="col-xs-6 col-md-4 center-block" style=" padding-left: 500px;"><h2 class="bg-textc">   {{ $latestcrsl[2]->water }} M</h2></div>
 
 
 
           @if($latestcrsl[0]->sensor == 2 )
-            @if($latestcrsl[0]->siteid == 01 )
+            @if($latestcrsl[0]->siteid == 03 )
           
 
         @if(strtotime($latestcrsl[0]->asof) > strtotime(\Carbon\Carbon::now()->subMinutes(20)->format('F d Y h:i:s A')))
@@ -60,43 +60,9 @@
             @endif
 
           @endif
-        @endif <!--if siteid is 01-->
+        @endif <!--if siteid is 03-->
 
 
-
-            @if($latestcrsl[1]->sensor == 2 )
-
-              @if($latestcrsl[1]->siteid == 02 )
-          
-
-          <!--div class="col-xs-6 col-md-4 center-block" style=" padding-left: 500px;"><h2 class="bg-textc">
-          {{$siteinfos->asof}}</br>
-          {{\Carbon\Carbon::now()->subMinutes(20)->format('F d Y h:i:s A')}}
-          </h2></div-->
-
-        @if(strtotime($latestcrsl[1]->asof) > strtotime(\Carbon\Carbon::now()->subMinutes(20)->format('F d Y h:i:s A')))
-
-          @if($latestcrsl[1]->water < $latestcrsl[1]->alarm)
-          <div class="col-xs-6 col-md-4 center-block" style=" padding-left: 300px;"><h4 class="bg-texte"> NORMAL <span class="glyphicon glyphicon glyphicon-map-marker RainGreen"></span></h4></div>
-            @endif
-            @if(($latestcrsl[1]->water >= $latestcrsl[1]->alarm)&&($latestcrsl[1]->water < $latestcrsl[1]->alert))
-            <div class="col-xs-6 col-md-4 center-block" style=" padding-left: 300px;"><h4 class="bg-texte"> ALARM <span class="glyphicon glyphicon glyphicon-map-marker RainBlueGreen"></span></h4></div>
-            @endif
-            @if(($latestcrsl[1]->water >= $latestcrsl[1]->alert)&&($latestcrsl[1]->water < $latestcrsl[1]->critical))
-            <div class="col-xs-6 col-md-4 center-block" style=" padding-left: 300px;"><h4 class="bg-texte"> ALERT <span class="glyphicon glyphicon glyphicon-map-marker RainYellow"></span></h4></div>
-            @endif
-            @if($latestcrsl[1]->water >= $latestcrsl[1]->critical)
-            <div class="col-xs-6 col-md-4 center-block" style=" padding-left: 300px;"><h4 class="bg-texte"> CRITICAL <span class="glyphicon glyphicon glyphicon-map-marker RainRed"></span></h4></div>
-            @endif
-
-          @endif
-
-            @if(strtotime($latestcrsl[1]->asof) < strtotime(\Carbon\Carbon::now()->subMinutes(60)->format('F d Y h:i:s A')))
-            <div class="col-xs-6 col-md-4 center-block" style=" padding-left: 300px;"><h4 class="bg-texte"> LATE DATA <span class="glyphicon glyphicon glyphicon-map-marker RainGray"></span></h4></div>
-            @endif
-
-          @endif
-        @endif <!--if siteid is 02-->
 
 
 

@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="refresh" content="600">
-        <title>SAN MATEO</title>
+        <title>MALABON DRRMO</title>
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="//cdn.datatables.net/1.10.8/css/jquery.dataTables.min.css">
   <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
@@ -33,7 +33,7 @@
         body{
     height: 100%;
     padding-top: 50px;
-    background-image: url("{{URL::asset('img/bck.jpg')}}");
+    background-image: url("{{URL::asset('img/background.png')}}");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -266,14 +266,14 @@ h2 {
   text-align: center;
 }
 h1 { 
-    color: #99e6ff;
+    color: #fddeff;
 }
 h2 { 
     color: #e8f6ff;
     font-size: 25px;
 }
 h3 { 
-    color: #fdffb7;
+    color: #9cc702;
 }
 h4{
    color: #b5c5c9;
@@ -340,108 +340,77 @@ h4{
  $colDefault     : #ecf0f1;
  $colHover       : #ffe6d1; /*/
 /* --- Style --- */
+html {
+  padding-top: 30px;
+}
 .navbar-default {
-  background-color: #01d5f8;
-  border-color: #1766b4;
+  background-color: #f70291;
+  border-color: #f70291;
 }
 .navbar-default .navbar-brand {
-  color: #0056ab;
+  color: #fffdb3;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #b6e9f8;
+  color: #f0ff00;
 }
 .navbar-default .navbar-text {
-  color: #0056ab;
+  color: #fffdb3;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #0056ab;
+  color: #fffdb3;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #b6e9f8;
+  color: #f0ff00;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #b6e9f8;
-  background-color: #1766b4;
+  color: #f0ff00;
+  background-color:#84014d;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  color: #b6e9f8;
-  background-color: #1766b4;
+  color: #f0ff00;
+  background-color: #35abbd;
 }
 .navbar-default .navbar-toggle {
-  border-color: #1766b4;
+  border-color: #35abbd;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #1766b4;
+  background-color: #35abbd;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #0056ab;
+  background-color: #fffdb3;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #0056ab;
+  border-color: #fffdb3;
 }
 .navbar-default .navbar-link {
-  color: #0056ab;
+  color: #fffdb3;
 }
 .navbar-default .navbar-link:hover {
-  color: #b6e9f8;
+  color: #f0ff00;
 }
 
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #0056ab;
+    color: #fffdb3;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #b6e9f8;
+    color: #f0ff00;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #b6e9f8;
-    background-color: #1766b4;
+    color: #f0ff00;
+    background-color: #35abbd;
   }
-}
-/* Do not take in account */
-html {
-  padding-top: 30px;
-}
-a.solink {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  text-align: center;
-  background: #f3f5f6;
-  color: #cfd6d9;
-  border: 1px solid #cfd6d9;
-  line-height: 30px;
-  text-decoration: none;
-  transition: all 0.3s;
-  z-index: 999;
-}
-a.solink::first-letter {
-  text-transform: capitalize;
-}
-a.solink:hover {
-  color: #428bca;
-}
-table.dataTable thead tr {
-  background-color: #f49542;
-}
-.modal-dialog{
-    position: relative;
-    display: table; 
-    overflow-y: auto;    
-    overflow-x: auto;
-    width:1000px;
-    height:700px; 
 }
 
 /*navbar customization*/
@@ -457,7 +426,7 @@ table.dataTable thead tr {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand">SAN MATEO</a>
+          <a class="navbar-brand">MALABON</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
