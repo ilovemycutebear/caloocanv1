@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="refresh" content="600">
-        <title>MALABON DRRMO</title>
+        <title>CALOOCAN CITY</title>
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="//cdn.datatables.net/1.10.8/css/jquery.dataTables.min.css">
   <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
@@ -33,7 +33,7 @@
         body{
     height: 100%;
     padding-top: 50px;
-    background-image: url("{{URL::asset('img/background.png')}}");
+    background-image: url("{{URL::asset('img/bck.jpg')}}");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -217,7 +217,7 @@ h2 {
 }*/
 .bg-texta {
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.5); /* Black w/opacity/see-through */
+  background-color: rgba(0,0,0, 0.8); /* Black w/opacity/see-through */
   font-weight: bold;
   border: 3px solid #f1f1f1;
   z-index: 2;
@@ -227,7 +227,7 @@ h2 {
 }
 .bg-textb {
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.5); /* Black w/opacity/see-through */
+  background-color: rgba(0,0,0, 0.8); /* Black w/opacity/see-through */
   font-weight: bold;
   border: 3px solid #f1f1f1;
   z-index: 2;
@@ -237,7 +237,7 @@ h2 {
 }
 .bg-textc {
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.5); /* Black w/opacity/see-through */
+  background-color: rgba(0,0,0, 0.8); /* Black w/opacity/see-through */
   font-weight: bold;
   border: 3px solid #f1f1f1;
   z-index: 2;
@@ -247,7 +247,7 @@ h2 {
 }
 .bg-textd {
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.5); /* Black w/opacity/see-through */
+  background-color: rgba(0,0,0, 0.8); /* Black w/opacity/see-through */
   font-weight: bold;
   border: 3px solid #f1f1f1;
   z-index: 2;
@@ -257,7 +257,7 @@ h2 {
 }
 .bg-texte {
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.5); /* Black w/opacity/see-through */
+  background-color: rgba(0,0,0, 0.8); /* Black w/opacity/see-through */
   font-weight: bold;
   border: 3px solid #f1f1f1;
   z-index: 2;
@@ -265,8 +265,15 @@ h2 {
   padding: 20px;
   text-align: center;
 }
+.alert-dark{
+
+    background-color: #03396c;
+}
+.bg-dark{
+  background-color: #326ada;
+}
 h1 { 
-    color: #fddeff;
+    color: #ffaa55;
 }
 h2 { 
     color: #e8f6ff;
@@ -278,6 +285,11 @@ h3 {
 h4{
    color: #b5c5c9;
     font-size: 20px;
+}
+h5{
+  color: #ffaa55;
+  font-size: 15px;
+
 }
 .glyphicon-gray {
   background: black;
@@ -305,7 +317,7 @@ h4{
   position: absolute;
   z-index: 1000;
   top: 550px;
-  left: 1500px;
+  left: 1800px;
   content: url("{{URL::asset('img/legendary.png')}}");
   border: 1px solid black;
   width: 200px;
@@ -314,8 +326,8 @@ h4{
 #logoContainera {
   position: absolute;
   z-index: 1001;
-  top: 470px;
-  left: 1690px;
+  top: 460px;
+  left: 1580px;
   content: url("{{URL::asset('img/wlegends.png')}}");
   border: 1px solid black;
   width: 200px;
@@ -344,75 +356,74 @@ html {
   padding-top: 30px;
 }
 .navbar-default {
-  background-color: #f70291;
-  border-color: #f70291;
+  background-color: #03396c;
+  border-color: #ff5500;
 }
 .navbar-default .navbar-brand {
-  color: #fffdb3;
+  color: #f2f3ff;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #f0ff00;
+  color: #fcd68e;
 }
 .navbar-default .navbar-text {
-  color: #fffdb3;
+  color: #f2f3ff;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #fffdb3;
+  color: #f2f3ff;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #f0ff00;
+  color: #fcd68e;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #f0ff00;
-  background-color:#84014d;
+  color: #fcd68e;
+  background-color: #ff5500;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  color: #f0ff00;
-  background-color: #35abbd;
+  color: #fcd68e;
+  background-color: #ff5500;
 }
 .navbar-default .navbar-toggle {
-  border-color: #35abbd;
+  border-color: #ff5500;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #35abbd;
+  background-color: #ff5500;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #fffdb3;
+  background-color: #f2f3ff;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #fffdb3;
+  border-color: #f2f3ff;
 }
 .navbar-default .navbar-link {
-  color: #fffdb3;
+  color: #f2f3ff;
 }
 .navbar-default .navbar-link:hover {
-  color: #f0ff00;
+  color: #fcd68e;
 }
 
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #fffdb3;
+    color: #f2f3ff;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #f0ff00;
+    color: #fcd68e;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #f0ff00;
-    background-color: #35abbd;
+    color: #fcd68e;
+    background-color: #ff5500;
   }
 }
-
 /*navbar customization*/
     </style>
 </head>
@@ -426,7 +437,7 @@ html {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand">MALABON</a>
+          <a class="navbar-brand">CALOOCAN</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -442,11 +453,11 @@ html {
             <li class="{{ Request::is('dttblview') ? 'active' : '' }}">
                 <a href="{{ url('dttblview') }}">TABLES</a>
             </li>
-            <li class="{{ Request::is('hstry') ? 'active' : '' }}">
+            <!--li class="{{ Request::is('hstry') ? 'active' : '' }}">
                 <a href="{{ url('hstry') }}">RAIN HISTORICAL</a>
-            </li>
+            </li-->
             <li class="{{ Request::is('hstrywlevel') ? 'active' : '' }}">
-                <a href="{{ url('hstrywlevel') }}">LEVEL HISTORICAL</a>
+                <a href="{{ url('hstrywlevel') }}">HISTORICAL DATA ( LEVEL )</a>
             </li>
             <!--li class="{{ Request::is('hstrycombo') ? 'active' : '' }}">
                 <a href="{{ url('hstrycombo') }}">COMBO HISTORICAL</a>

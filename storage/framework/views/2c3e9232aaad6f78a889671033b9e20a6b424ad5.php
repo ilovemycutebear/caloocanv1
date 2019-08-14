@@ -265,6 +265,13 @@ h2 {
   padding: 20px;
   text-align: center;
 }
+.alert-dark{
+
+    background-color: #750c50;
+}
+.bg-dark{
+  background-color: #bf1985;
+}
 h1 { 
     color: #fddeff;
 }
@@ -278,6 +285,11 @@ h3 {
 h4{
    color: #b5c5c9;
     font-size: 20px;
+}
+h5{
+  color: #fac5e8;
+  font-size: 15px;
+
 }
 .glyphicon-gray {
   background: black;

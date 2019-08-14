@@ -80,7 +80,7 @@
 
                                 <div class="col-md-6">
 
-                                   <input type="text" name="daterange" id="datepicker" />
+                                   <input type="text" size="44" name="daterange" id="datepicker" />
 
                                 </div>
                             </div>
@@ -102,8 +102,18 @@
 <?php $__env->startPush('map-scripts'); ?>
 <script>
 $(document).ready(function() {
-    var start = moment().subtract(29, 'days');
-    var end = moment();
+
+  /*$('#datepicker').daterangepicker({
+    timePicker: true,
+    startDate: moment().startOf('hour'),
+    endDate: moment().startOf('hour').add(32, 'hour'),
+    locale: {
+      format: 'YYYY/MM/DD hh:mm A'
+    }
+  });*/
+
+   var start = moment();
+    var end = moment().add(1, 'days');
     var formattedDate;
 
     function cb(start, end) {
@@ -111,13 +121,14 @@ $(document).ready(function() {
     }
 
     $('#datepicker').daterangepicker({
+        timePicker: true,
         startDate: start,
         endDate: end,
         locale: { 
-            format: 'YYYY/MM/DD'
+            format: 'YYYY/MM/DD HH:mm'
                 },
         ranges: {
-           'Today': [moment(), moment()],
+           'Today': [moment(), moment().add(1, 'days')],
            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
            'Last 30 Days': [moment().subtract(29, 'days'), moment()],

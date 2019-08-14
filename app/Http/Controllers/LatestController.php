@@ -91,8 +91,9 @@ class LatestController extends Controller
 		return $lb;*/
 		$date = new DateTime();
 		//$date->modify('-24 hours');
-		$formatted_date = Carbon::now('UTC')->subDays(1);
-		$visitCount = DB::table('logs')->join('site', 'site.id', '=', 'logs.site_id')->select(DB::raw("FORMAT(SUM(rvalue), 2) as rain"),'logs.site_id','logs.created_at','site.name','site.sensortype')->where('logs.created_at', '>',$formatted_date)
+		$formatted_date = Carbon::now();
+		$hournow = date('Y-m-d H:00:00',  strtotime($formatted_date));
+		$visitCount = DB::table('logs')->join('site', 'site.id', '=', 'logs.site_id')->select(DB::raw("FORMAT(SUM(rvalue), 2) as rain"),'logs.site_id','logs.created_at','site.name','site.sensortype')->where('logs.created_at', '>=',$hournow)
 		->where(function ($query) {
     	$query->where('site.sensortype','=',1)
         ->orWhere('site.sensortype','=',3);
@@ -101,7 +102,42 @@ class LatestController extends Controller
 
 // This will hold the count for you
 		return Datatables::of($visitCount)->make(true);
+		//return $hournow;
 		
+	}
+		public function getdailydata(){
+
+
+		/*$date = new DateTime();
+		$date->modify('-3 hours');
+		$formatted_date = $date->format('Y-m-d H:i:s');
+		$lb = DB::table('logs')->join('site', 'site.id', '=', 'logs.site_id')->where('created_at', '>',$formatted_date)->groupBy('created_at')->sum('rvalue');
+
+
+		return $lb;*/
+		$date = new DateTime();
+		//$date->modify('-24 hours');
+		$formatted_date = Carbon::now();
+		$daynow = date('Y-m-d 08:00:00',  strtotime($formatted_date));
+		$yesday = date('Y-m-d 08:00:00',  strtotime(Carbon::now()->subDays(1)));
+		$asinNow =  Carbon::now();
+		if(strtotime($asinNow)>=strtotime($daynow)){
+			$comparedate = $daynow;
+		}
+		else if (strtotime($asinNow)<strtotime($daynow)){
+			$comparedate = $yesday;
+		}
+
+		$visitCount = DB::table('logs')->join('site', 'site.id', '=', 'logs.site_id')->select(DB::raw("FORMAT(SUM(rvalue), 2) as rain"),'logs.site_id','logs.created_at','site.name','site.sensortype')->where('logs.created_at', '>',$comparedate)
+		->where(function ($query) {
+    	$query->where('site.sensortype','=',1)
+        ->orWhere('site.sensortype','=',3);
+    	})
+		->groupBy('site_id')->get();
+
+// This will hold the count for you
+		return Datatables::of($visitCount)->make(true);
+		//return $yesday;
 	}
 
 }

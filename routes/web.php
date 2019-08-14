@@ -48,6 +48,9 @@ Route::post('editinfo/add','DatatablesController@AddSite');
 Route::get('editalerts','DatatablesController@editalertsdata');
 Route::get('export','CsvController@exportdata');
 
+Route::get('checkhourly','LatestController@gethourlydata');
+Route::get('checkdaily','LatestController@getdailydata');
+
 
 
 Route::post('addlog/addlogdata', 'DatatablesController@AddrawData');
@@ -62,7 +65,10 @@ Route::get('joined','DatatablesController@InnJoin');
 Route::get('laracharts/{chartid}', 'ChartController@getLaraChart');
 Route::get('wlaracharts/{chartids}', 'ChartController@getwlLaraChart');
 Route::get('latestdata', 'LatestController@getlatestdata');
-Route::get('hourlydata', 'LatestController@gethourlydata');
+Route::get('hourlydata', 'LatestController@gethourlydata');\
+
+Route::get('dailydata', 'LatestController@getdailydata');
+
 Route::get('wllatestdata', 'LatestController@wlgetlatestdata');
 Route::get('wlhourlydata', 'LatestController@wlgethourlydata');
 Route::get('dttbldetails', 'historicalController@wlgetsitedata');

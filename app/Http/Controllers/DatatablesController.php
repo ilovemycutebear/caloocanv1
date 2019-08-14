@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use DB;
 use App\site;
+use App\logs;
 use Illuminate\Http\Request;
 use App\User;
 use App\computedlogs;
@@ -57,14 +58,20 @@ class DatatablesController extends Controller
         	//return view('datatables.index',compact('dtable'));      	
         }
         protected function datafl($siteid){
+
+       /*   $sample =DB::table('logs')->select('rvalue','created_at')->where('site_id',$siteid)->get()->groupBy(function($date) {
+            return Carbon::parse($date->created_at)->format('h');
+        });;*/
             $users = DB::table('logs')
             ->join('site', 'site.id', '=', 'logs.site_id')
             ->select(DB::raw('logs.wlevel-site.sitelev as wlevel,site.name,logs.created_at,logs.batteryvolt,logs.rvalue'))
             ->where('logs.site_id',$siteid)->orderBy('logs.created_at','DESC')
-            ->get();
-            return  Datatables::of($users)->editColumn('rvalue', function($user){
+            ->get()->groupBy(function($date) {
+            return Carbon::parse($date->created_at)->format('d');
+        });
+           /*return  Datatables::of($users)->editColumn('rvalue', function($user){
                 if($user->rvalue > 0){
-                    return "<div class='alert-success text-center'>".$user->rvalue."</div>";
+                   return "<div class='alert-success text-center'>".$user->rvalue."</div>";
                 }
                 elseif($user->rvalue <= 0){
                     return "<div class='alert-info text-center'>".$user->rvalue."</div>";
@@ -75,8 +82,9 @@ class DatatablesController extends Controller
             })
             ->make(true); 
             
-        
-        }
+        return $users;*/
+        return $users;
+      }
     protected function wldatafl($siteid){
             $users = DB::table('computedlogs')
             ->join('site', 'site.id', '=', 'computedlogs.site_id')

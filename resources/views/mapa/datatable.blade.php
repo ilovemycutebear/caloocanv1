@@ -8,24 +8,37 @@
 
 <!--#################################################DIVIDER######################################################################-->
  <!--*********TABLES**************-->
-       <div id="table_latest" class="alert-info text-center"><h1>LATEST DATA(RAIN)</h1></div>
+       <div id="table_latest" class="alert-dark text-center"><h1>LATEST DATA(RAIN)</h1></div>
         <table class="table table-bordered" id="latest-tablern">
         <thead>
-            <tr class="bg-primary">
-                <th>SITE NAME</th>
-                <th>DATE/TIME</th>
-                <th>RAIN<br>10 MINS</th>
+            <tr class="bg-dark">
+                <th><h5>SITE NAME</h5></th>
+                <th><h5>DATE/TIME</h5></th>
+                <th><h5>RAIN<br>5 MIN</h5></th>
             </tr>
         </thead>
        </table>
         <!--*********TABLES**************-->
        <!--*********TABLES**************-->
-       <div id="table_latest" class="alert-info text-center"><h1>DAILY DATA(RAIN)</h1></div>
+       <div id="table_latest" class="alert-dark text-center"><h1>HOURLY DATA(RAIN)</h1></div>
+       <div id="table_latest" class="alert-dark text-center"><h5>(e.g., 8:00-9:00 , 12:00-1:00 , 5:00-6:00)</h5></div>
         <table class="table table-bordered" id="hourly-tablern">
         <thead>
-            <tr class="bg-primary">
-                <th>SITE NAME</th>
-                <th>RAIN<br>24 HRS</th>
+            <tr class="bg-dark">
+                <th><h5>SITE NAME</h5></th>
+                <th><h5>HOURLY<br>RAIN</h5></th>
+            </tr>
+        </thead>
+       </table>
+        <!--*********TABLES**************-->
+     <!--*********TABLES**************-->
+       <div id="table_latest" class="alert-dark text-center"><h1>24 HR DATA(RAIN)</h1></div>
+       <div id="table_latest" class="alert-dark text-center"><h5>8:00 AM TODAY UP TO 8:00 AM TOMORROW</h5></div>
+        <table class="table table-bordered" id="daily-tablern">
+        <thead>
+            <tr class="bg-dark">
+                <th><h5>SITE NAME</h5></th>
+                <th><h5>24 <br>HOURS</h5></th>
             </tr>
         </thead>
        </table>
@@ -37,37 +50,37 @@
 
 <!--#################################################DIVIDER######################################################################-->
  <!--*********TABLES**************-->
-       <div id="table_latest" class="alert-info text-center"><h1>LATEST DATA (WATER LEVEL)</h1></div>
+       <div id="table_latest" class="alert-dark text-center"><h1>LATEST DATA (WATER LEVEL)</h1></div>
         <table class="table table-bordered" id="latest-tablewl">
         <thead>
-            <tr class="bg-primary">
-                <th>SITE NAME</th>
-                <th>CREATED AT</th>
-                <th>WL</th>
+            <tr class="bg-dark">
+                <th><h5>SITE NAME</h5></th>
+                <th><h5>CREATED AT</h5></th>
+                <th><h5>WL</h5></th>
             </tr>
         </thead>
        </table>
         <!--*********TABLES**************-->
        <!--*********TABLES**************-->
-       <div id="table_latest" class="alert-info text-center"><h1>HOURLY DATA (WATER LEVEL)</h1></div>
+       <div id="table_latest" class="alert-dark text-center"><h1>HOURLY DATA (WATER LEVEL)</h1></div>
         <table class="table table-bordered" id="hourly-tablewl">
         <thead>
-            <tr class="bg-primary">
-                <th>SITE NAME</th>
-                <th>AVERAGE LEVEL<br>1 HR</th>
+            <tr class="bg-dark">
+                <th><h5>SITE NAME</h5></th>
+                <th><h5>AVERAGE LEVEL<br>1 HR</h5></th>
             </tr>
         </thead>
        </table>
         <!--*********TABLES**************-->
          <!--*********TABLES**************-->
-       <div id="table_latest" class="alert-info text-center"><h1>WARNINGS</h1></div>
+       <div id="table_latest" class="alert-dark text-center"><h1>WARNINGS</h1></div>
         <table class="table table-bordered" id="table-warningwrn">
         <thead>
-            <tr class="bg-primary">
-                <th>SITE NAME</th>
-                <th>ALERT</th>
-                <th>ALARM</th>
-                <th>CRITICAL</th>
+            <tr class="bg-dark">
+                <th><h5>SITE NAME</h5></th>
+                <th><h5>ALERT</h5></th>
+                <th><h5>ALARM</h5></th>
+                <th><h5>CRITICAL</h5></th>
             </tr>
         </thead>
        </table>
@@ -84,6 +97,8 @@ drawhourlytable();
 
 drawlatestablern();
 drawhourlytablern();
+drawdailytablern();
+
 setInterval(function(){
     //clusterGroup.clearLayers();
     //console.log("refreshing data");
@@ -96,6 +111,7 @@ setInterval(function(){
     drawhourlytable();
     drawlatestablern();
     drawhourlytablern();
+     drawdailytablern();
   }, 60000);
 function calltablern(){
 
@@ -125,6 +141,23 @@ function drawhourlytablern(){
         bInfo : false, //remove showing entries
         paging: false,
         ajax: '{{URL::asset('hourlydata')}}',
+        columns: [
+            { data: 'name', name: 'name' },
+            { data: 'rain', name: 'rain' }
+        ]
+    });
+}
+function drawdailytablern(){
+
+    $('#daily-tablern').DataTable({
+        destroy: true,
+        processing: true,
+        serverSide: true,
+        searching: false,
+        ordering: false, //remove ordering button
+        bInfo : false, //remove showing entries
+        paging: false,
+        ajax: '{{URL::asset('dailydata')}}',
         columns: [
             { data: 'name', name: 'name' },
             { data: 'rain', name: 'rain' }
