@@ -17,13 +17,12 @@
         <li class="active"><a data-target="#table" data-toggle="tab">Table</a></li>
         <li><a data-target="#rnchart" data-toggle="tab">Rain Chart</a></li>
         <li><a data-target="#wlchart" data-toggle="tab">Level Chart</a></li>
-        <li><a data-target="#dschart" data-toggle="tab">Discharge Chart</a></li>
       </ul>
 
       <div class="tab-content">
         <div class="tab-pane active" id="table">
        <!--*********TABLES**************-->
-       <div id="control_label" class="alert-info text-center"><h1>TABLE INFORMATION</h1></div>
+       <div id="control_label" class="text-center" style="background-color: #03396;"><h1>TABLE INFORMATION</h1></div>
         <table class="table table-bordered" id="users-table">
         <thead>
             <tr>
@@ -32,10 +31,7 @@
                 <th>BATTERY</th>
                 <th>RAIN</th>
                 <th>WATER LEVEL</th>
-                <th>RAW LEVEL</th>
 
-
-                <th>DISCHARGE</th>
             </tr>
         </thead>
        </table>
@@ -44,7 +40,7 @@
 
          <!--*********WLCHARTS**************-->
         <div class="tab-pane" id="wlchart">
-         <div id="control_label" class="alert-info text-center"><h1>HISTORICAL GRAPH</h1></div>
+         <div id="control_label" class="text-center" style="background-color: #03396c;"><h1>HISTORICAL GRAPH</h1></div>
         <!--*********WLCHARTS**************-->
         
        <div id="wlcontrol_div" style="width: 1000px; height: 700px; "></div>
@@ -53,19 +49,10 @@
 
 
         <div class="tab-pane" id="rnchart">
-         <div id="control_label" class="alert-info text-center"><h1>HISTORICAL GRAPH</h1></div>
+         <div id="control_label" class="text-center"  style="background-color: #03396c;"><h1>HISTORICAL GRAPH</h1></div>
         <!--*********WLCHARTS**************-->
         
        <div id="rncontrol_div" style="width: 1000px; height: 700px; "></div>
-
-        </div>
-
-
-         <div class="tab-pane" id="dschart">
-         <div id="control_label" class="alert-info text-center"><h1>HISTORICAL GRAPH</h1></div>
-        <!--*********WLCHARTS**************-->
-        
-       <div id="dscontrol_div" style="width: 1000px; height: 700px; "></div>
 
         </div>
       </div>
@@ -82,7 +69,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">HISTORICAL COMBO DATA</div>
+                    <div class="panel-heading">HISTORICAL DATA</div>
 
                     <div class="panel-body">
                       
@@ -115,10 +102,15 @@
 <br />
 <br />
 <br />
+                            <div class="form-group">
+                               <label for="csv_file" class="col-md-4 control-label"></label>
 
-                            
+                                <div class="col-md-6">
 
+                                   NOTE: select "CUSTOM RANGE" for time specific filtering.
 
+                                </div>
+                            </div>
                              
                     </div>
                 </div>
@@ -129,8 +121,8 @@
 @push('map-scripts')
 <script>
 $(document).ready(function() {
-    var start = moment().subtract(29, 'days');
-    var end = moment();
+    var start = moment();
+    var end = moment().add(1, 'days');
     var formattedDate;
 
     function cb(start, end) {
@@ -138,13 +130,14 @@ $(document).ready(function() {
     }
 
     $('#datepicker').daterangepicker({
+        timePicker: true,
         startDate: start,
         endDate: end,
         locale: { 
-            format: 'YYYY/MM/DD'
+            format: 'YYYY/MM/DD HH:mm'
                 },
         ranges: {
-           'Today': [moment(), moment()],
+           'Today': [moment(), moment().add(1, 'days')],
            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
@@ -158,7 +151,7 @@ $('#datepicker').on('apply.daterangepicker', function(ev, picker) {
             
             RNcalltable();
             drawRnChart();
-            drawDsChart();
+            //drawDsChart();
             drawWlhart();
 
             $('#myModal').modal('show');
@@ -188,9 +181,7 @@ function RNcalltable(){
             { data: 'asof', name: 'asof' },
             { data: 'voltage', name: 'voltage' , orderable: false},
             { data: 'rainten', name: 'rainten' },
-            { data: 'water', name: 'water' },
-            { data: 'rawlvl', name: 'rawlvl' },
-            { data: 'discharge', name: 'discharge' },
+            { data: 'rawlvl', name: 'rawlvl' }
         ], 
         dom: 'Bfrtip',
         buttons: [

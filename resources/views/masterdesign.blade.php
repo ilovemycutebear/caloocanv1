@@ -221,7 +221,7 @@ h2 {
   font-weight: bold;
   border: 3px solid #f1f1f1;
   z-index: 2;
-  width: 250px;
+  width: 540px;
   padding: 20px;
   text-align: center;
 }
@@ -251,7 +251,7 @@ h2 {
   font-weight: bold;
   border: 3px solid #f1f1f1;
   z-index: 2;
-  width: 250px;
+  width: 540px;
   padding: 20px;
   text-align: center;
 }
@@ -456,12 +456,12 @@ html {
             <!--li class="{{ Request::is('hstry') ? 'active' : '' }}">
                 <a href="{{ url('hstry') }}">RAIN HISTORICAL</a>
             </li-->
-            <li class="{{ Request::is('hstrywlevel') ? 'active' : '' }}">
+            <!--li class="{{ Request::is('hstrywlevel') ? 'active' : '' }}">
                 <a href="{{ url('hstrywlevel') }}">HISTORICAL DATA ( LEVEL )</a>
-            </li>
-            <!--li class="{{ Request::is('hstrycombo') ? 'active' : '' }}">
-                <a href="{{ url('hstrycombo') }}">COMBO HISTORICAL</a>
             </li-->
+            <li class="{{ Request::is('hstrycombo') ? 'active' : '' }}">
+                <a href="{{ url('hstrycombo') }}">HISTORICAL DATA</a>
+            </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
              <li class="{{ Request::is('about') ? 'active' : '' }}">
