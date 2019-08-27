@@ -19,7 +19,7 @@
       <?php endif; ?>
       <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
 
-          <div class="col-md-3 center-block" style=" margin-left: -350px ; margin-right: 100px;"><h2 class="bg-textb">WATER LEVELa</h2></div>
+          <div class="col-md-3 center-block" style=" margin-left: -350px ; margin-right: 100px;"><h2 class="bg-textb">WATER LEVEL</h2></div>
           <div class="col-md-3 center-block" style="margin-left: -100px ; margin-right: 500px;"><h2 class="bg-textb">RAIN</h2></div>
           <div class="col-md-3 center-block" style="margin-left: 150px ; margin-right: -100px;"><h2 class="bg-textb">WATER LEVEL</h2></div>
           <div class="col-md-3 center-block" style="margin-left: 100px; margin-right: -500px;" ><h2 class="bg-textb">RAIN</h2></div>
@@ -28,7 +28,7 @@
            <div class="col-md-3 center-block" style=" margin-left: -350px ; margin-right: 300px;"><h2 class="bg-textc"><?php echo e($latestcrsl[0]->water); ?> M</h2></div>
           <div class="col-md-3 center-block" style="margin-left: -300px ; margin-right: 500px;"><h2 class="bg-textc"><?php echo e($latestcrsl[0]->rainten); ?> mm</h2></div>
           <div class="col-md-3 center-block" style="margin-left: 150px ; margin-right: -100px;"><h2 class="bg-textc"><?php echo e($latestcrsl[1]->water); ?> M</h2></div>
-          <div class="col-md-3 center-block" style="margin-left: 100px; margin-right: -500px;" ><h2 class="bg-textc"><?php echo e($latestcrsl[1]->water); ?> mm</h2></div>
+          <div class="col-md-3 center-block" style="margin-left: 100px; margin-right: -500px;" ><h2 class="bg-textc"><?php echo e($latestcrsl[1]->rainten); ?> mm</h2></div>
 
 
 
