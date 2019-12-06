@@ -165,7 +165,7 @@ function RNcalltable(){
     $('#users-table').DataTable({
         destroy: true,
         ajax: {
-            "url": '<?php echo e(URL::asset('hstry/update')); ?>',
+            "url": '<?php echo e(URL::asset('hstrycombo/update')); ?>',
             "data" : {
                 "_token": "<?php echo e(csrf_token()); ?>",
                 daterange: daterangestring, 
