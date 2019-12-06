@@ -163,7 +163,7 @@ $('#datepicker').on('apply.daterangepicker', function(ev, picker) {
 function RNcalltable(){
     var daterangestring = $("#datepicker").val();
     var siterangestring = $("#sel1 option:selected").text();
-    console.log(siterangestring);
+    console.log(siterangestring); //adding comment so hopefully this works
     console.log(daterangestring);
     $('#users-table').DataTable({
         destroy: true,
