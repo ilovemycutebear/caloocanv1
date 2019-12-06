@@ -123,7 +123,7 @@ $(document).ready(function() {
     var formattedDate;
 
     function cb(start, end) {
-        $('#datepicker span').html(start.format('YYYY/MM/DD') + ' - ' + end.format('YYYY/MM/DD'));
+        $('#datepicker span').html(start.format('YYYY-MM-DD HH:mm:ss') + ' - ' + end.format('YYYY-MM-DD HH:mm:ss'));
     }
 
     $('#datepicker').daterangepicker({
@@ -131,15 +131,9 @@ $(document).ready(function() {
         startDate: start,
         endDate: end,
         locale: { 
-            format: 'YYYY/MM/DD HH:mm'
+            format: 'YYYY/MM/DD HH:mm:ss'
                 },
         ranges: {
-           'Today': [moment(), moment().add(1, 'days')],
-           'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-           'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-           'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-           'This Month': [moment().startOf('month'), moment().endOf('month')],
-           'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
         }
     }, cb);
 
@@ -160,7 +154,7 @@ $('#datepicker').on('apply.daterangepicker', function(ev, picker) {
 function RNcalltable(){
     var daterangestring = $("#datepicker").val();
     var siterangestring = $("#sel1 option:selected").text();
-    console.log(siterangestring);
+    console.log(siterangestring); //adding comment so hopefully this works
     console.log(daterangestring);
     $('#users-table').DataTable({
         destroy: true,
