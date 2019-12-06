@@ -126,7 +126,7 @@ $(document).ready(function() {
     var formattedDate;
 
     function cb(start, end) {
-        $('#datepicker span').html(start.format('YYYY-MM-DD HH:mm:ss') + ' - ' + end.format('YYYY-MM-DD HH:mm:ss'));
+        $('#datepicker span').html(start.format('YYYY/MM/DD HH:mm:ss') + ' - ' + end.format('YYYY/MM/DD HH:mm:ss'));
     }
 
     $('#datepicker').daterangepicker({
